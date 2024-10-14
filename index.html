@@ -15,6 +15,74 @@
 
 
         <title>Portfolio website Ricko</title>
+        <style type="text/css">
+ /* css untuk menggerakan gambar atas */
+ .home__blob-img {
+    transition: transform 0.3s ease; /* Menambahkan transisi agar gerakan halus */
+}
+
+.home__blob:hover .home__blob-img {
+    transform: translate(10px, -10px); /* Menggerakkan gambar saat dihover */
+}
+
+
+
+/* Base Styles */
+.work__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.work__img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.work__img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect - Image Move */
+.work__img:hover img {
+    transform: scale(1.1); /* Zoom in the image slightly */
+}
+
+/* Description and Rating */
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+}
+
+/* Rating Style */
+.rating {
+    margin-top: 5px;
+}
+
+.work__img:hover .description {
+    opacity: 1; /* Show the description when hovering */
+}
+
+/* Optional: Add some shadow or effect to the image */
+.work__img:hover {
+    transform: translateY(-10px); /* Move the whole image slightly up */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+        </style>
     </head>
     <body>
         <!--===== HEADER =====-->
@@ -52,10 +120,11 @@
                 <div class="home__social">
                     <a href="https://www.linkedin.com/in/rickoaditia/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
                     <!-- <a href="" class="home__social-icon"><i class='bx bxl-behance' ></i></a> -->
-                    <a href="" class="home__social-icon"><i class='bx bxl-youtube' ></i></a>
+                    <!-- <a href="" class="home__social-icon"><i class='bx bxl-youtube' ></i></a> -->
                     <a href="https://www.instagram.com/ricko.aditia/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
                     <a href="https://web.facebook.com/ricko.jambi/" class="home__social-icon"><i class='bx bxl-facebook' ></i></a>
-                    <a href="" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="https://rickocaditia.github.io/ricko-aditia/" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
                 </div>
 
                 <div class="home__img">
