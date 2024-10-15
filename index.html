@@ -11,11 +11,24 @@
 
 <!--tambahan fontawesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-
         <title>Portfolio website Ricko</title>
-        <style type="text/css">
+
+ <style type="text/css">
+
+/* css Ricko untuk menggerakan tulisan atas */
+#changing-text {
+    display: inline-block;
+    border-right: 2px solid;
+    animation: blink-caret 0.7s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+
+
  /* css untuk menggerakan gambar atas */
  .home__blob-img {
     transition: transform 0.3s ease; /* Menambahkan transisi agar gerakan halus */
@@ -112,7 +125,7 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Ricko</span><br>Programer</h1>
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Ricko</span><br><span id="changing-text"></span></h1>
 
                     <a href="#" class="button">CV Resume</a>
                 </div>
@@ -262,9 +275,29 @@
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Project Me</h2>
+                <h2 class="section-title">My Project</h2>
 
+                <!-- Tab Navigation -->
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Web')">Project Web</button>
+        <button class="tablinks" onclick="openTab(event, 'Video')">Project Video Editor</button>
+        <button class="tablinks" onclick="openTab(event, 'Design')">Designe Grafis</button>
+    </div>
+        <!-- Tab Content: Project Web -->
+        <div id="Web" class="tabcontent">
                 <div class="work__container bd-grid">
+
+                    <a href="" class="work__img">
+                    <img src="assets/img/Ecomarce_fish.jpg" alt="Website Ecomarce Penjualan Ikan">
+                    <div class="description">
+                    <p>e commerce goldfish </p>
+                    <div class="rating">
+                    ⭐⭐⭐⭐⭐
+                     </div>
+                    </div>
+                    </a>
+
+
                 	<a href="" class="work__img">
                     <img src="assets/img/android_1.png" height="200" alt="Android Mobile">
                     <div class="description">
@@ -365,10 +398,60 @@
                     ⭐⭐⭐⭐⭐
                      </div>
                     </div>
-                    </a>
-
-                    
+                    </a>   
                 </div>
+            </div>
+
+             <!-- Tab Content: Project Video Editor -->
+    <div id="Video" class="tabcontent">
+        <div class="work__container bd-grid">
+            <!-- Project Video Editor -->
+            <a href="" class="work__img">
+                <img src="assets/img/video_editor_project1.jpg" alt="Video Project 1">
+                <div class="description">
+                    <p>Video Editing Project 1</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </a>
+            <a href="" class="work__img">
+                <img src="assets/img/video_editor_project2.jpg" alt="Video Project 2">
+                <div class="description">
+                    <p>Video Editing Project 2</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </a>
+
+            <a href="" class="work__img">
+                <img src="assets/img/video_editor_project2.jpg" alt="Video Project 2">
+                <div class="description">
+                    <p>Video Editing Project 2</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Tab Content: Designe Grafis -->
+    <div id="Design" class="tabcontent">
+        <div class="work__container bd-grid">
+            <!-- Project Designe Grafis -->
+            <a href="" class="work__img">
+                <img src="assets/img/graphic_design_project1.jpg" alt="Design Project 1">
+                <div class="description">
+                    <p>Graphic Design Project 1</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </a>
+            <a href="" class="work__img">
+                <img src="assets/img/graphic_design_project2.jpg" alt="Design Project 2">
+                <div class="description">
+                    <p>Graphic Design Project 2</p>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
             </section>
 
             <!--===== CONTACT =====-->
@@ -386,15 +469,20 @@
             </section>
         </main>
 
+        <!-- Tombol WhatsApp -->
+    <a href="https://wa.me/6282376848266" target="_blank" class="whatsapp-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
         <!--===== FOOTER =====-->
         <footer class="footer">
-            <p class="footer__title">Ricko</p>
+            <p class="footer__title">Ricko Aditia</p>
             <div class="footer__social">
                 <a href="https://www.facebook.com/ricko.jambi/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/ricko.aditia/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.linkedin.com/in/rickoaditia/" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
             </div>
-            <p class="footer__copy">&#169; Lautan Jasa. All rigths reserved</p>
+            <p class="footer__copy">&#169; Ricko Aditia. All rigths reserved</p>
         </footer>
 
 
@@ -403,5 +491,114 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+        <script src="assets/js/text-bergerak.js"></script>
+<script src="assets/js/tablinks.js"></script>
+
+
+
+
+
+<!-- CSS for Tab Styling -->
+
+
+<style>
+.work__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.work__img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.work__img img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.work__img:hover img {
+    transform: scale(1.5); /* Zoom effect */
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    transition: opacity 0.5s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+.work__img:hover .description {
+    opacity: 1; /* Show description on hover */
+}
+
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab button {
+    background-color: #ddd;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.tab button:hover {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+}
+
+.tabcontent.active {
+    display: block;
+}
+</style>
+
+<style>
+        /* Style untuk tombol WhatsApp */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        /* Logo WhatsApp */
+        .whatsapp-btn img {
+            width: 35px;
+            height: 35px;
+        }
+
+        /* Hover effect untuk memperbesar tombol saat mouse diarahkan */
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
     </body>
 </html>
